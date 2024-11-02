@@ -1,26 +1,19 @@
-import './App.css'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Note from './pages/Note/Note';
+import './App.css';
+import './assets/css/style.css';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import FinanceColumns from './components/FinanceColumns/FinanceColumns';
 
 function App() {
   return (
     <>
-      <Header />
-      <Router>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/note">Note</Link></li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/note" element={<Note />} />
-        </Routes>
-      </Router>
+      <div className="wrapper">
+        <Header />
+        <main className="main">
+          <FinanceColumns />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

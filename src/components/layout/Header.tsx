@@ -1,9 +1,9 @@
+import './style.css';
+
 const Header = () => {
     return (
-        <header className="header">
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
+        <header className="w-full py-4 bg-blue-600 text-white text-center text-xl font-bold">
+            Budget Accounting
         </header>
     )
 }
