@@ -1,13 +1,20 @@
+import { ReactNode } from "react";
 import { MdClose } from "react-icons/md";
+import "./style.css";
 
-const Modal = () => {
+interface ModalProps {
+    children: ReactNode;
+}
+
+const Modal: React.FC<ModalProps> = ({ children }) => {
     return (
         <div className="modal">
             <div className="modal_overlay"></div>
-            <div className="modal_body">
-                <div className="modal_close"><MdClose /></div>
-                <div className="modal_content">
-                    Modal content
+            <div className="modal_body_wrap">
+                <div className="modal_body">
+                    <div className="modal_content">
+                        {children}
+                    </div>
                 </div>
             </div>
         </div>
