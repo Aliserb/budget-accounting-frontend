@@ -62,8 +62,10 @@ const FinanceChart: React.FC<FinanceChartProps> = ({ incomeData, expenseData }) 
             y: {
                 beginAtZero: true,
                 ticks: {
-                    callback: (value: number) => `${value}₽`,
-                },
+                    callback(value: string | number) {
+                      return `${value}₽`;
+                    },
+                },                  
             },
         },
     };

@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { MdClose } from "react-icons/md";
 import "./style.css";
 
 interface ModalProps {

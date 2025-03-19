@@ -35,33 +35,11 @@ const FinanceChartBar: React.FC<FinanceChartBarProps> = ({ totalIncome, totalExp
         ],
     };
 
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                callbacks: {
-                    label: (context: any) => `${context.parsed.y} ₽`,
-                },
-            },
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    callback: (value: number) => `${value}₽`,
-                },
-            },
-        },
-    };
-
     return (
         <div className="p-4 bg-white rounded-lg shadow-lg mt-8">
             <div className="container">
                 <h2 className="text-xl font-semibold mb-4 text-center">Общий доход и расход</h2>
-                <Bar data={data} options={options} />
+                <Bar data={data} />
             </div>
         </div>
     );
